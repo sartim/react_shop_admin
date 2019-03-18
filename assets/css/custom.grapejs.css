@@ -1,0 +1,66 @@
+#gjs {
+  border: none;
+}
+.gjs-cv-canvas {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.gjs-block {
+  width: auto;
+  height: auto;
+  min-height: auto;
+}
+/* Primary color for the background */
+.gjs-one-bg {
+  background-color: #0078b6;
+}
+
+/* Secondary color for the text color */
+.gjs-two-color {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Tertiary color for the background */
+.gjs-three-bg {
+  background-color: #0098e1;
+  color: white;
+}
+
+/* Quaternary color for the text color */
+.gjs-four-color,
+.gjs-four-color-h:hover {
+  color: #0098e1;
+}
+.panel__top {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  position: initial;
+  justify-content: center;
+  justify-content: space-between;
+}
+.panel__basic-actions {
+  position: initial;
+}
+.editor-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+}
+.editor-canvas {
+  flex-grow: 1;
+}
+.panel__right {
+  flex-basis: 230px;
+  position: relative;
+  overflow-y: auto;
+}
+.panel__switcher {
+  position: initial;
+}
+.panel__devices {
+  position: initial;
+}
