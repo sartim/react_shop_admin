@@ -115,40 +115,13 @@ class HomePage extends React.Component {
         document.documentElement.style.display = "block";
         document.body.style.backgroundColor = "#f9f9f9";
 
-        this.props.dispatch(articleActions.getArticlesPublishedToday());
-        this.props.dispatch(articleActions.getArticlesPublishedYesterday());
-        this.props.dispatch(articleActions.getArticlesPublishedThisMonth());
-        this.props.dispatch(articleActions.getArticlesPublishedLastMonth());
-        this.props.dispatch(articleActions.getArticlesPublishedThisYear());
-        this.props.dispatch(articleActions.getArticlesPublishedLastYear());
-        // this.props.dispatch(articleActions.getDailyCounts('published'));
         this.props.dispatch(userActions.getOnlineUsers());
 
         this.renderPublishedDataBasedChart();
         this.renderRejectedDataBasedChart();
 
         socket.on('stats message', function(data){
-            if (data.published_articles_today) {
-                this.setState({published_articles_today: data.published_articles_today});
-            }
-            if (data.published_articles_this_month) {
-                this.setState({published_articles_this_month: data.published_articles_this_month});
-            }
-            if (data.published_articles_last_month) {
-                this.setState({published_articles_last_month: data.published_articles_last_month});
-            }
-            if (data.published_articles_this_year) {
-                this.setState({published_articles_this_year: data.published_articles_this_year});
-            }
-            if (data.published_articles_last_year) {
-                this.setState({published_articles_last_year: data.published_articles_last_year});
-            }
-            if (data.published_articles_last_year) {
-                this.setState({published_articles_last_year: data.published_articles_last_year});
-            }
-            if (data.daily_published_articles) {
-                this.setState({daily_published_articles: data.daily_published_articles});
-            }
+
         }.bind(this));
 
         socket.on('online users', function(data) {
@@ -248,72 +221,8 @@ class HomePage extends React.Component {
 
     render() {
         const {
-            published_articles_today, published_articles_yesterday, published_articles_this_month,
-            published_articles_last_month, published_articles_last_year, published_articles_this_year,
-            online_users
         } = this.props;
 
-        let online;
-        if (this.state.online_users) {
-            online = this.state.online_users.results;
-        } else if (online_users.items) {
-            online = online_users.items.results;
-        }
-
-        let published_today_count;
-        if (this.state.published_articles_today > 0) {
-            published_today_count = this.state.published_articles_today
-        } else if (published_articles_today.items) {
-            published_today_count = published_articles_today.items.count;
-        }
-        else {
-            published_today_count = (<SpinnerLoader meta="preloader-wrapper small active" type="spinner-layer spinner-white-only" />)
-        }
-
-        let published_yesterday_count;
-        if (this.state.published_articles_yesterday > 0) {
-            published_yesterday_count = this.state.published_articles_yesterday
-        } else if (published_articles_yesterday.items) {
-            published_yesterday_count = published_articles_yesterday.items.count;
-        } else {
-            published_yesterday_count = (<SpinnerLoader meta="preloader-wrapper small active" type="spinner-layer spinner-white-only" />)
-        }
-
-        let published_this_month_count;
-        if (this.state.published_articles_this_month > 0) {
-            published_this_month_count = this.state.published_articles_this_month;
-        } else if (published_articles_this_month.items) {
-            published_this_month_count = published_articles_this_month.items.count;
-        } else {
-            published_this_month_count = (<SpinnerLoader meta="preloader-wrapper small active" type="spinner-layer spinner-white-only" />)
-        }
-
-        let published_last_month_count;
-        if (this.state.published_articles_last_month > 0) {
-            published_last_month_count = this.state.published_articles_last_month
-        } else if (published_articles_last_month.items) {
-            published_last_month_count = published_articles_last_month.items.count;
-        } else {
-            published_last_month_count = (<SpinnerLoader meta="preloader-wrapper small active" type="spinner-layer spinner-white-only" />)
-        }
-
-        let published_this_year_count;
-        if (this.state.published_articles_this_year > 0) {
-            published_this_year_count = this.state.published_articles_this_year;
-        } else if (published_articles_this_year.items) {
-            published_this_year_count = published_articles_this_year.items.count;
-        } else {
-            published_this_year_count = (<SpinnerLoader meta="preloader-wrapper small active" type="spinner-layer spinner-white-only" />)
-        }
-
-        let published_last_year_count;
-        if (this.state.published_articles_last_year > 0) {
-            published_last_year_count = this.state.published_articles_last_year
-        } else if (published_articles_last_year.items) {
-            published_last_year_count = published_articles_last_year.items.count;
-        } else {
-            published_last_year_count = (<SpinnerLoader meta="preloader-wrapper small active" type="spinner-layer spinner-white-only" />)
-        }
 
         const current_user = JSON.parse(localStorage.getItem('user'));
 
@@ -334,7 +243,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Today</p>
-                              <h4 className="card-stats-number">{ published_today_count }</h4>
+                              <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 15%*/}
                                 {/*<span className="cyan text text-lighten-5">from yesterday</span>*/}
@@ -346,7 +255,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue lighten-1 white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Yesterday</p>
-                              <h4 className="card-stats-number">{ published_yesterday_count }</h4>
+                              <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 15%*/}
                                 {/*<span className="cyan text text-lighten-5">from yesterday</span>*/}
@@ -358,7 +267,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Published This Month</p>
-                              <h4 className="card-stats-number">{ published_this_month_count }</h4>
+                              <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 70%*/}
                                 {/*<span className="red-text text-lighten-5">last month</span>*/}
@@ -370,7 +279,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Last Month</p>
-                              <h4 className="card-stats-number">{ published_last_month_count }</h4>
+                              <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 80%*/}
                                 {/*<span className="teal-text text-lighten-5">from yesterday</span>*/}
@@ -382,7 +291,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Published This Year</p>
-                              <h4 className="card-stats-number">{ published_this_year_count }</h4>
+                              <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_down</i> 3%*/}
                                 {/*<span className="deep-orange-text text-lighten-5">from last month</span>*/}
@@ -394,7 +303,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Last Year</p>
-                              <h4 className="card-stats-number">{ published_last_year_count }</h4>
+                              <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_down</i> 3%*/}
                                 {/*<span className="deep-orange-text text-lighten-5">from last month</span>*/}
@@ -420,7 +329,7 @@ class HomePage extends React.Component {
                       </div>
                   </div>
                 </section>
-                <RightSideNavPage online_users={online} current_user={current_user} />
+                {/*<RightSideNavPage online_users={online} current_user={current_user} />*/}
               </div>
             </div>
           </div>
@@ -431,15 +340,11 @@ class HomePage extends React.Component {
 
 function mapStateToProps(state) {
     const {
-        published_articles_today, published_articles_yesterday, published_yesterday_count,
-        published_articles_this_month, published_articles_last_month, published_articles_this_year,
-        published_articles_last_year, online_users
+
     } = state;
 
     return {
-        published_articles_today, published_articles_yesterday, published_yesterday_count,
-        published_articles_this_month, published_articles_last_month, published_articles_this_year,
-        published_articles_last_year, online_users
+
     };
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "react_shop_admin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/sartim/react_shop_admin.git"
@@ -38,6 +38,6 @@
     "html-webpack-plugin": "^2.26.0",
     "path": "^0.12.7",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^3.1.11"
+    "webpack-dev-server": "^2.8.2"
   }
 }

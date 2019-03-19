@@ -21,7 +21,7 @@ class SideNav extends Component {
 
         let user_name;
         if (account) {
-            user_name = account.user.name;
+            user_name = account.user.username;
         }
 
         return (

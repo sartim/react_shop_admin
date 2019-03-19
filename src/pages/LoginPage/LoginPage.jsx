@@ -55,8 +55,8 @@ class LoginPage extends React.Component {
                   <form className="login-form" name="form" onSubmit={this.handleSubmit}>
                       <div className="row">
                         <div className="input-field col s12 center">
-                          <img src="https://s3-eu-west-1.amazonaws.com/bench-hivisasa-com/assets/images/logo.png" alt="HIVISASA WORKBENCH" />
-                          <p className="center login-form-text">Hivisasa Workbench</p>
+                          {/*<img src="" alt="" />*/}
+                          {/*<p className="center login-form-text"></p>*/}
                         </div>
                       </div>
                       <div className="row margin">
@@ -82,7 +82,7 @@ class LoginPage extends React.Component {
                       <div className="row">
                         <div className="col s12 m12 l12 ml-2 mt-3">
                           <input type="checkbox" id="remember-me" />
-                          <label htmlFor="remember-me">Remember me</label>
+                          {/*<label htmlFor="remember-me">Remember me</label>*/}
                         </div>
                       </div>
                       <div className="row">
