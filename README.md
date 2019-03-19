@@ -15,3 +15,14 @@ ReactJS Shop admin dashboard. To run the server source code locally use this `ht
     
     $ npm run build:dev
     $ npm run build:prod
+
+
+**Demo URL**
+
+`https://react-shop-admin.firebaseapp.com`
+
+###### Login Credentials
+
+username: `demo`
+
+password: `qwertytrewq`
