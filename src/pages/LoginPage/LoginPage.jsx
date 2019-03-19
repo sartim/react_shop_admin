@@ -12,7 +12,7 @@ class LoginPage extends React.Component {
         this.props.dispatch(userActions.logout());
 
         this.state = {
-            email: "",
+            username: "",
             password: "",
             submitted: false
         };
@@ -39,16 +39,16 @@ class LoginPage extends React.Component {
         e.preventDefault();
 
         this.setState({ submitted: true });
-        const { email, password } = this.state;
+        const { username, password } = this.state;
         const { dispatch } = this.props;
-        if (email && password) {
-            dispatch(userActions.login(email, password));
+        if (username && password) {
+            dispatch(userActions.login(username, password));
         }
     }
 
     render() {
         const { loggingIn } = this.props;
-        const { email, password, submitted } = this.state;
+        const { username, password, submitted } = this.state;
         return (
             <div id="login-page" className="row">
                 <div className="col s12 z-depth-4 card-panel">
@@ -60,13 +60,13 @@ class LoginPage extends React.Component {
                         </div>
                       </div>
                       <div className="row margin">
-                        <div className={'input-field col s12' + (submitted && !email ? ' has-error' : '')}>
+                        <div className={'input-field col s12' + (submitted && !username ? ' has-error' : '')}>
                           <i className="material-icons prefix pt-5">person_outline</i>
-                          <input type="text" name="email" value={email} onChange={this.handleChange}/>
-                          {submitted && !email &&
-                              <div className="help-block">email is required</div>
+                          <input type="text" name="username" value={username} onChange={this.handleChange}/>
+                          {submitted && !username &&
+                              <div className="help-block">username is required</div>
                           }
-                          <label htmlFor="email">email</label>
+                          <label htmlFor="username">username</label>
                         </div>
                       </div>
                       <div className="row margin">
