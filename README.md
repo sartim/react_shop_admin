@@ -1,10 +1,10 @@
 ## ReactJS Shop Admin
 
 
-[![version](https://img.shields.io/badge/version-v0.0.1-orange.svg?style=flat)](https://github.com/sartim/flask-headless-cms/issues)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sartim/flask-headless-cms/issues)
+[![version](https://img.shields.io/badge/version-v0.0.1-orange.svg?style=flat)](https://github.com/sartim/react_shop_admin/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sartim/react_shop_admin/issues)
 
-ReactJS Shop admin dashboard. To run the server source code locally use this `https://github.com/sartim/shop_rest_api.git`
+React Shop Admin Dashboard. Content management system for managing an online shop for products which is also a web socket client. To run the server source code locally which is also the web socket client use [this](https://github.com/sartim/shop_rest_api.git) repo
 
 **Setup and running project on dev**
 
