@@ -20,7 +20,7 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`${config.apiUrl}/api/v1/auth/token-auth/`, requestOptions)
+    return fetch(`${config.apiUrl}/account/generate/jwt/`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
