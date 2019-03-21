@@ -60,13 +60,13 @@ class LoginPage extends React.Component {
                         </div>
                       </div>
                       <div className="row margin">
-                        <div className={'input-field col s12' + (submitted && !username ? ' has-error' : '')}>
+                        <div className={'input-field col s12' + (submitted && !email ? ' has-error' : '')}>
                           <i className="material-icons prefix pt-5">person_outline</i>
-                          <input type="text" name="username" value={username} onChange={this.handleChange}/>
-                          {submitted && !username &&
-                              <div className="help-block">username is required</div>
+                          <input type="text" name="username" value={email} onChange={this.handleChange}/>
+                          {submitted && !email &&
+                              <div className="help-block">email is required</div>
                           }
-                          <label htmlFor="username">username</label>
+                          <label htmlFor="username">email</label>
                         </div>
                       </div>
                       <div className="row margin">
