@@ -39,10 +39,10 @@ class LoginPage extends React.Component {
         e.preventDefault();
 
         this.setState({ submitted: true });
-        const { username, password } = this.state;
+        const { email, password } = this.state;
         const { dispatch } = this.props;
-        if (username && password) {
-            dispatch(userActions.login(username, password));
+        if (email && password) {
+            dispatch(userActions.login(email, password));
         }
     }
 
@@ -62,7 +62,7 @@ class LoginPage extends React.Component {
                       <div className="row margin">
                         <div className={'input-field col s12' + (submitted && !email ? ' has-error' : '')}>
                           <i className="material-icons prefix pt-5">person_outline</i>
-                          <input type="text" name="username" value={email} onChange={this.handleChange}/>
+                          <input type="text" name="email" value={email} onChange={this.handleChange}/>
                           {submitted && !email &&
                               <div className="help-block">email is required</div>
                           }
