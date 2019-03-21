@@ -12,7 +12,7 @@ class LoginPage extends React.Component {
         this.props.dispatch(userActions.logout());
 
         this.state = {
-            username: "",
+            email: "",
             password: "",
             submitted: false
         };
@@ -48,7 +48,7 @@ class LoginPage extends React.Component {
 
     render() {
         const { loggingIn } = this.props;
-        const { username, password, submitted } = this.state;
+        const { email, password, submitted } = this.state;
         return (
             <div id="login-page" className="row">
                 <div className="col s12 z-depth-4 card-panel">
@@ -66,7 +66,7 @@ class LoginPage extends React.Component {
                           {submitted && !email &&
                               <div className="help-block">email is required</div>
                           }
-                          <label htmlFor="username">email</label>
+                          <label htmlFor="email">email</label>
                         </div>
                       </div>
                       <div className="row margin">
