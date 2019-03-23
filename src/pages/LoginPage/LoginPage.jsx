@@ -95,7 +95,7 @@ class LoginPage extends React.Component {
                       </div>
                       <div className="row">
                         <div className="input-field col s6 m6 l6">
-                          <p className="margin medium-small"><Link to="/register">Register</Link></p>
+                          {/*<p className="margin medium-small"><Link to="/register">Register</Link></p>*/}
                         </div>
                         <div className="input-field col s6 m6 l6">
                           <p className="margin right-align medium-small"><a href="#">Forgot password ?</a></p>
