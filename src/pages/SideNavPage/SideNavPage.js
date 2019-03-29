@@ -29,7 +29,7 @@ class SideNav extends Component {
             <div className="brand-sidebar">
               <h1 className="logo-wrapper">
                 <a href="#" className="brand-logo darken-1">
-                  <img src="#" alt="ADMIN"/>
+                  {/*<img src="#" alt="ADMIN"/>*/}
                   <span className="logo-text hide-on-med-and-down">ADMIN</span>
                 </a>
                 <a href="#" className="navbar-toggler" onClick={Script.minimizeSideNav}>
@@ -57,14 +57,8 @@ class SideNav extends Component {
                         <li className="active">
                           <Link to="/">
                             <i className="material-icons">keyboard_arrow_right</i>
-                              <span>Articles</span>
+                              <span>Orders</span>
                             </Link>
-                        </li>
-                        <li>
-                          <a href="">
-                            <i className="material-icons">keyboard_arrow_right</i>
-                            <span>Levels</span>
-                          </a>
                         </li>
                       </ul>
                     </div>
