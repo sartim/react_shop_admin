@@ -212,9 +212,16 @@ class HomePage extends React.Component {
     }
 
     render() {
-        const {} = this.props;
+        const {online_users} = this.props;
 
         const current_user = JSON.parse(localStorage.getItem('user'));
+
+        let online;
+        if (this.state.online_users) {
+            online = this.state.online_users.results;
+        } else if (online_users.items) {
+            online = online_users.items.results;
+        }
 
         return (
           <SocketProvider socket={socket}>
@@ -308,7 +315,7 @@ class HomePage extends React.Component {
                       </div>
                   </div>
                 </section>
-                {/*<RightSideNavPage online_users={online} current_user={current_user} />*/}
+                <RightSideNavPage online_users={online} current_user={current_user} />
               </div>
             </div>
           </div>
@@ -319,11 +326,11 @@ class HomePage extends React.Component {
 
 function mapStateToProps(state) {
     const {
-
+        online_users
     } = state;
 
     return {
-
+        online_users
     };
 }
 
