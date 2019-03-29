@@ -93,13 +93,13 @@ class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            published_articles_today: 0,
-            published_articles_yesterday: 0,
-            published_articles_this_month: 0,
-            published_articles_last_month: 0,
-            published_articles_this_year: 0,
-            published_articles_last_year: 0,
-            daily_published_articles: null
+            orders_today: 0,
+            orders_yesterday: 0,
+            orders_this_month: 0,
+            orders_last_month: 0,
+            orders_this_year: 0,
+            orders_last_year: 0,
+            daily_orders: null
         }
     }
 
