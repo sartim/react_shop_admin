@@ -38,7 +38,7 @@ module.exports = {
     externals: {
         // global app config object
         config: JSON.stringify({
-            apiUrl: 'https://flask-shop-api.herokuapp.com/'
+            apiUrl: 'https://flask-shop-api.herokuapp.com'
         })
     }
 }
