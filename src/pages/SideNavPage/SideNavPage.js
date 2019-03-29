@@ -65,7 +65,7 @@ class SideNav extends Component {
                   </li>
                   <li className="bold">
                     <a className="collapsible-header  waves-effect waves-cyan">
-                      <i className="material-icons">art_track</i>
+                      <i className="material-icons">view_comfy</i>
                       <span className="nav-text">Orders</span>
                     </a>
                     <div className="collapsible-body">
