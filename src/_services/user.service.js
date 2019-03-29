@@ -43,7 +43,7 @@ function getUsers() {
         headers: authHeader()
     };
 
-    return fetch(`${config.apiUrl}/api/v1/account/user/`, requestOptions).then(handleResponse);
+    return fetch(`${config.apiUrl}/account/user/`, requestOptions).then(handleResponse);
 }
 
 function getOnlineUsers() {
@@ -52,7 +52,7 @@ function getOnlineUsers() {
         headers: authHeader()
     };
 
-    return fetch(`${config.apiUrl}/api/v1/account/user/online/`, requestOptions).then(handleResponse);
+    return fetch(`${config.apiUrl}/account/user/online/`, requestOptions).then(handleResponse);
 }
 
 function getByIdOrEmailOrPhone(param) {
@@ -61,11 +61,11 @@ function getByIdOrEmailOrPhone(param) {
         headers: authHeader()
     };
     if (param.id)
-        return fetch(`${config.apiUrl}/api/v1/account/user/?id=${param.id}`, requestOptions).then(handleResponse);
+        return fetch(`${config.apiUrl}/account/user/?id=${param.id}`, requestOptions).then(handleResponse);
     else if (param.email)
-        return fetch(`${config.apiUrl}/api/v1/account/user/?email=${param.email}`, requestOptions).then(handleResponse);
+        return fetch(`${config.apiUrl}/account/user/?email=${param.email}`, requestOptions).then(handleResponse);
     else if (param.phone)
-        return fetch(`${config.apiUrl}/api/v1/account/user/?phone=${param.phone}`, requestOptions).then(handleResponse);
+        return fetch(`${config.apiUrl}/account/user/?phone=${param.phone}`, requestOptions).then(handleResponse);
 }
 
 function register(user) {
