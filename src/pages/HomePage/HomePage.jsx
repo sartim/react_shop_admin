@@ -118,7 +118,6 @@ class HomePage extends React.Component {
         this.props.dispatch(userActions.getOnlineUsers());
 
         this.renderPublishedDataBasedChart();
-        this.renderRejectedDataBasedChart();
 
         socket.on('stats message', function(data){
 
@@ -133,10 +132,8 @@ class HomePage extends React.Component {
 
 
     componentWillUnmount() {
-        if(this.published_chart)
-            this.published_chart.dispose();
-        if(this.rejected_chart)
-            this.rejected_chart.dispose();
+        if(this.orders_chart)
+            this.orders_chart.dispose();
     }
 
     componentDidUpdate(oldProps) {
@@ -148,7 +145,7 @@ class HomePage extends React.Component {
 
         chart.paddingRight = 20;
 
-        let data = this.state.daily_published_articles;
+        let data = this.state.daily_orders;
         if(data) {
             chart.data = data;
         } else {
@@ -210,19 +207,12 @@ class HomePage extends React.Component {
     }
 
     renderPublishedDataBasedChart() {
-        let chart = this.createDataBasedChart("chartdiv", `${config.apiUrl}/api/v2/article/published/daily/count/`);
-        this.published_chart = chart;
-    }
-
-    renderRejectedDataBasedChart() {
-        let chart = this.createDataBasedChart("rejectedchartdiv", `${config.apiUrl}/api/v2/article/rejected/daily/count/`);
-        this.rejected_chart = chart;
+        let chart = this.createDataBasedChart("chartdiv", `${config.apiUrl}/order/daily/count/`);
+        this.order_chart = chart;
     }
 
     render() {
-        const {
-        } = this.props;
-
+        const {} = this.props;
 
         const current_user = JSON.parse(localStorage.getItem('user'));
 
@@ -242,7 +232,7 @@ class HomePage extends React.Component {
                         <div className="col s12 m6 l2">
                           <div className="card">
                             <div className="card-content light-blue white-text">
-                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Today</p>
+                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Today</p>
                               <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 15%*/}
@@ -254,7 +244,7 @@ class HomePage extends React.Component {
                         <div className="col s12 m6 l2">
                           <div className="card">
                             <div className="card-content light-blue lighten-1 white-text">
-                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Yesterday</p>
+                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Yesterday</p>
                               <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 15%*/}
@@ -266,7 +256,7 @@ class HomePage extends React.Component {
                         <div className="col s12 m6 l2">
                           <div className="card">
                             <div className="card-content light-blue white-text">
-                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Published This Month</p>
+                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders This Month</p>
                               <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 70%*/}
@@ -278,7 +268,7 @@ class HomePage extends React.Component {
                         <div className="col s12 m6 l2">
                           <div className="card">
                             <div className="card-content light-blue white-text">
-                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Last Month</p>
+                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Last Month</p>
                               <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 80%*/}
@@ -290,7 +280,7 @@ class HomePage extends React.Component {
                         <div className="col s12 m6 l2">
                           <div className="card">
                             <div className="card-content light-blue white-text">
-                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Published This Year</p>
+                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders This Year</p>
                               <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_down</i> 3%*/}
@@ -302,7 +292,7 @@ class HomePage extends React.Component {
                         <div className="col s12 m6 l2">
                           <div className="card">
                             <div className="card-content light-blue white-text">
-                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Published Last Year</p>
+                              <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Last Year</p>
                               <h4 className="card-stats-number"></h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_down</i> 3%*/}
@@ -314,18 +304,7 @@ class HomePage extends React.Component {
                       </div>
                     </div>
                       <div className="row" style={{ background: '#FFFFFF', padding: '0px' }}>
-                        <div className="col s12">
-                          <ul className="tabs">
-                            <li className="tab col s3"><a className="active" href="#published_stats">Published</a></li>
-                            <li className="tab col s3"><a href="#rejected_stats">Rejected</a></li>
-                          </ul>
-                        </div>
-                        <div id="published_stats" className="col s12">
-                            <div id="chartdiv" style={{ width: "100%", height: "500px" }}></div>
-                        </div>
-                        <div id="rejected_stats" className="col s12">
-                            <div id="rejectedchartdiv" style={{ width: "100%", height: "500px" }}></div>
-                        </div>
+                        <div id="chartdiv" style={{ width: "100%", height: "500px" }}></div>
                       </div>
                   </div>
                 </section>
