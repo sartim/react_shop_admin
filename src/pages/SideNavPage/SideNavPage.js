@@ -66,50 +66,32 @@ class SideNav extends Component {
                   <li className="bold">
                     <a className="collapsible-header  waves-effect waves-cyan">
                       <i className="material-icons">art_track</i>
-                      <span className="nav-text">Articles</span>
+                      <span className="nav-text">Orders</span>
                     </a>
                     <div className="collapsible-body">
                       <ul>
                         <li>
-                          <Link to="/article/my-picked">
+                          <Link to="/order/pending">
                             <i className="material-icons">keyboard_arrow_right</i>
-                            <span>My Picked Articles</span>
+                            <span>Pending</span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/article/drafted">
+                          <Link to="/order/in-progress">
                             <i className="material-icons">keyboard_arrow_right</i>
-                            <span>Drafted Articles</span>
+                            <span>In progress</span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/article/pending">
+                          <Link to="/order/delivered">
                             <i className="material-icons">keyboard_arrow_right</i>
-                            <span>Pending Articles</span>
+                            <span>Delivered</span>
                           </Link>
                         </li>
                         <li>
-                          <Link to="/article/published">
+                          <Link to="/order/all">
                             <i className="material-icons">keyboard_arrow_right</i>
-                            <span>Published Articles</span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/article/rejected">
-                            <i className="material-icons">keyboard_arrow_right</i>
-                            <span>Rejected Articles</span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/article/list">
-                            <i className="material-icons">keyboard_arrow_right</i>
-                            <span>All Articles</span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/article/create">
-                            <i className="material-icons">keyboard_arrow_right</i>
-                            <span>New Article</span>
+                            <span>All</span>
                           </Link>
                         </li>
                       </ul>
