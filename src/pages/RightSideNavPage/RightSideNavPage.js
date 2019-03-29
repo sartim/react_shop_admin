@@ -26,7 +26,7 @@ class RightSideNavPage extends React.Component {
                                 <div key={user.id}>
                                 {user.id !== current_user.user.id &&
                                 <a href="#!" className="collection-item avatar border-none">
-                                    <img src="https://s3-eu-west-1.amazonaws.com/files.hivisasa.com/default_user.png"
+                                    <img src="/assets/img/default_user.png"
                                          className="circle red accent-2"/>
                                     <span className="line-height-0">{user.name} </span>
                                     <span className="medium-small right blue-grey-text text-lighten-3"></span>

@@ -29,8 +29,8 @@ class SideNav extends Component {
             <div className="brand-sidebar">
               <h1 className="logo-wrapper">
                 <a href="#" className="brand-logo darken-1">
-                  <img src="https://s3-eu-west-1.amazonaws.com/bench-hivisasa-com/assets/images/logo.png" alt="Hivisasa"/>
-                  <span className="logo-text hide-on-med-and-down"></span>
+                  <img src="#" alt="ADMIN"/>
+                  <span className="logo-text hide-on-med-and-down">ADMIN</span>
                 </a>
                 <a href="#" className="navbar-toggler" onClick={Script.minimizeSideNav}>
                   <i className="material-icons">radio_button_checked</i>
@@ -40,7 +40,7 @@ class SideNav extends Component {
             <ul id="slide-out" className="side-nav fixed leftside-navigation">
               <li className="side-user-info">
                 <Link to="/profile">
-                  <img src="https://s3-eu-west-1.amazonaws.com/files.hivisasa.com/default_user.png"
+                  <img src="/assets/img/default_user.png"
                        className="side-user-img responsive" />
                   <span className="side-user-name">{user_name}</span>
                 </Link>

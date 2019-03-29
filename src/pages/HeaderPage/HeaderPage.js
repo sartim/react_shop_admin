@@ -95,7 +95,7 @@ class Header extends Component {
                    <a href="javascript:void(0);" className="dropdown-trigger"
                       data-target="profile-dropdown">
                       <span className="avatar-status avatar-online">
-                        <img src="https://s3-eu-west-1.amazonaws.com/files.hivisasa.com/default_user.png"
+                        <img src="/assets/img/default_user.png"
                              className="img center responsive"/>
                       </span>
                    </a>
