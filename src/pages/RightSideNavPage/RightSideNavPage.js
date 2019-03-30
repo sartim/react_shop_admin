@@ -45,7 +45,7 @@ class RightSideNavPage extends React.Component {
         }
 
         return (
-            <div id="right-side-nav" className="sidenav" style={{ "z-index": "1000"}}>
+            <div id="right-side-nav" className="sidenav">
                 <div className="row">
                     <div className="col s12">
                       <ul className="tabs">
