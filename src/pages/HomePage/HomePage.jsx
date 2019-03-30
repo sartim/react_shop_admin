@@ -163,7 +163,7 @@ class HomePage extends React.Component {
 
         let series = chart.series.push(new am4charts.LineSeries());
         series.dataFields.dateX = "date";
-        series.dataFields.valueY = "total";
+        series.dataFields.valueY = "value";
         series.tooltipText = "{valueY.value}";
         series.strokeWidth = 2;
         series.minBulletDistance = 15;
