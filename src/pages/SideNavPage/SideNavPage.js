@@ -99,6 +99,28 @@ class SideNav extends Component {
                   </li>
                   <li className="bold">
                     <a className="collapsible-header  waves-effect waves-cyan">
+                      <i className="material-icons">view_comfy</i>
+                      <span className="nav-text">Products</span>
+                    </a>
+                    <div className="collapsible-body">
+                      <ul>
+                        <li>
+                          <Link to="/product/list">
+                            <i className="material-icons">keyboard_arrow_right</i>
+                            <span>List</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/product/report">
+                            <i className="material-icons">keyboard_arrow_right</i>
+                            <span>Report</span>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li className="bold">
+                    <a className="collapsible-header  waves-effect waves-cyan">
                       <i className="material-icons">account_box</i>
                       <span className="nav-text">User</span>
                     </a>
