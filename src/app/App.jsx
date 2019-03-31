@@ -11,6 +11,7 @@ import { UserListPage } from '../pages/UserListPage';
 import {ProfileVieWPage} from "../pages/ProfileViewPage";
 import {SettingsViewPage} from "../pages/SettingsViewPage";
 import {SearchResultsPage} from "../pages/SearchResultsPage";
+import {ProductListPage} from "../pages/ProductListPage";
 
 class App extends React.Component {
     constructor(props) {
@@ -35,6 +36,7 @@ class App extends React.Component {
                         <PrivateRoute exact path="/" component={HomePage} />
                         <Route path="/login" component={LoginPage} />
                         <Route path="/register" component={RegisterPage} />
+                        <PrivateRoute path="/product/list" component={ProductListPage} />
                         <PrivateRoute path="/user/list" component={UserListPage} />
                         <PrivateRoute path="/profile" component={ProfileVieWPage}/>
                         <PrivateRoute path="/settings" component={SettingsViewPage}/>
