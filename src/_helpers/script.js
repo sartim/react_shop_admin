@@ -1,4 +1,4 @@
-import * as M from "../../assets/js/materialize.min";
+import * as M from "../../bower_components/admin-assets/js/materialize.min";
 import React, { Component } from "react";
 import io from "socket.io-client";
 
