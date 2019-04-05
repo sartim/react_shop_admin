@@ -10,7 +10,7 @@ import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import Script from '../../_helpers/script';
 import { FabPage } from "../FabPage";
 import io from "socket.io-client";
-import * as M from "../../../assets/js/materialize.min";
+import * as M from "../../../bower_components/admin-assets/js/materialize.min";
 import {SocketProvider} from "socket.io-react";
 import {BreadCrumbPage} from "../BreadCrumbPage";
 import {SpinnerLoader} from "../LoaderPage/SpinnerLoader";
