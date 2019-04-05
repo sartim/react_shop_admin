@@ -25,6 +25,7 @@ React Shop Admin Dashboard. Content management system for managing an online sho
 
 **Setup and running project on dev**
 
+    $ bower install
     $ npm install
     $ npm start
 
