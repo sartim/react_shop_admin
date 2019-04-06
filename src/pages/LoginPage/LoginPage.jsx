@@ -61,7 +61,7 @@ class LoginPage extends React.Component {
                       </div>
                       <div className="row margin">
                         <div className={'input-field col s12' + (submitted && !email ? ' has-error' : '')}>
-                          <i className="material-icons prefix pt-5">person_outline</i>
+                          <i className="material-icons prefix pt-2">person_outline</i>
                           <input type="text" name="email" value={email} onChange={this.handleChange}/>
                           {submitted && !email &&
                               <div className="help-block">email is required</div>
@@ -71,7 +71,7 @@ class LoginPage extends React.Component {
                       </div>
                       <div className="row margin">
                         <div className={'input-field col s12' + (submitted && !password ? ' has-error' : '')}>
-                          <i className="material-icons prefix pt-5">lock_outline</i>
+                          <i className="material-icons prefix pt-2">lock_outline</i>
                           <input type="password" name="password" value={password} onChange={this.handleChange} />
                           {submitted && !password &&
                               <div className="help-block">Password is required</div>
