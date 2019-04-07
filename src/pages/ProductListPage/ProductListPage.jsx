@@ -8,6 +8,7 @@ import Link from "react-router-dom/es/Link";
 import {PaginationPage} from "../PaginationPage";
 import {BreadCrumbPage} from "../BreadCrumbPage";
 import {ModalPage} from "../ModalPage";
+import {userActions, productActions} from "../../_actions";
 
 class ProductListPage extends React.Component {
 
@@ -22,6 +23,8 @@ class ProductListPage extends React.Component {
         Script.fab();
         this.editProduct = this.editProduct.bind(this);
         this.deleteProduct = this.deleteProduct.bind(this);
+
+        this.props.dispatch(productActions.getProducts());
     }
 
     editProduct(id) {
