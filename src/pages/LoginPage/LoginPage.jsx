@@ -55,8 +55,7 @@ class LoginPage extends React.Component {
                   <form className="login-form" name="form" onSubmit={this.handleSubmit}>
                       <div className="row">
                         <div className="input-field col s12 center">
-                          {/*<img src="" alt="" />*/}
-                          {/*<p className="center login-form-text"></p>*/}
+                          <p className="center login-form-text">Login</p>
                         </div>
                       </div>
                       <div className="row margin">
@@ -98,7 +97,7 @@ class LoginPage extends React.Component {
                           {/*<p className="margin medium-small"><Link to="/register">Register</Link></p>*/}
                         </div>
                         <div className="input-field col s6 m6 l6">
-                          <p className="margin right-align medium-small"><a href="#">Forgot password ?</a></p>
+                          <p className="margin right-align medium-small"><Link to="/forgot-password">Forgot password ?</Link></p>
                         </div>
                       </div>
                   </form>
