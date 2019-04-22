@@ -13,6 +13,7 @@ import {SettingsViewPage} from "../pages/SettingsViewPage";
 import {SearchResultsPage} from "../pages/SearchResultsPage";
 import {ProductListPage} from "../pages/ProductListPage";
 import {OrderListPage} from "../pages/OrderListPage/ProductListPage";
+import {ForgotPasswordPage} from "../pages/ForgotPasswordPage";
 
 class App extends React.Component {
     constructor(props) {
@@ -36,9 +37,10 @@ class App extends React.Component {
                     <div>
                         <PrivateRoute exact path="/" component={HomePage} />
                         <Route path="/login" component={LoginPage} />
+                        <Route path="/forgot-password" component={ForgotPasswordPage} />
                         <Route path="/register" component={RegisterPage} />
                         <PrivateRoute path="/product/list" component={ProductListPage} />
-                        <PrivateRoute path="/ORDER/list" component={OrderListPage} />
+                        <PrivateRoute path="/order/list" component={OrderListPage} />
                         <PrivateRoute path="/user/list" component={UserListPage} />
                         <PrivateRoute path="/profile" component={ProfileVieWPage}/>
                         <PrivateRoute path="/settings" component={SettingsViewPage}/>
