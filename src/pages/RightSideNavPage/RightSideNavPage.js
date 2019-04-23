@@ -5,12 +5,19 @@ import {HorizontalLoader} from "../LoaderPage/HorizontalLoader";
 class RightSideNavPage extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {};
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
         // Load sidenav scripts
         Script.maximizeSideNav();
         Script.tabs();
+    }
+
+    handleChange() {
+        console.log("Change");
     }
 
     render() {
@@ -147,7 +154,7 @@ class RightSideNavPage extends React.Component {
                                 <span className="font-weight-600">Notifications</span>
                                 <div className="switch right">
                                   <label>
-                                    <input checked="" type="checkbox" />
+                                    <input checked="" type="checkbox" onChange={this.handleChange} />
                                     <span className="lever"></span>
                                   </label>
                                 </div>
@@ -159,7 +166,7 @@ class RightSideNavPage extends React.Component {
                                 <span className="font-weight-600">Show recent activity</span>
                                 <div className="switch right">
                                   <label>
-                                    <input checked="" type="checkbox" />
+                                    <input checked="" type="checkbox" onChange={this.handleChange} />
                                     <span className="lever"></span>
                                   </label>
                                 </div>
@@ -171,7 +178,7 @@ class RightSideNavPage extends React.Component {
                                 <span className="font-weight-600">Notifications</span>
                                 <div className="switch right">
                                   <label>
-                                    <input type="checkbox" />
+                                    <input type="checkbox" onChange={this.handleChange} />
                                     <span className="lever"></span>
                                   </label>
                                 </div>
@@ -183,7 +190,7 @@ class RightSideNavPage extends React.Component {
                                 <span className="font-weight-600">Show recent activity</span>
                                 <div className="switch right">
                                   <label>
-                                    <input type="checkbox" />
+                                    <input type="checkbox" onChange={this.handleChange} />
                                     <span className="lever"></span>
                                   </label>
                                 </div>
@@ -195,7 +202,7 @@ class RightSideNavPage extends React.Component {
                                 <span className="font-weight-600">Show your emails</span>
                                 <div className="switch right">
                                   <label>
-                                    <input type="checkbox" />
+                                    <input type="checkbox" onChange={this.handleChange} />
                                     <span className="lever"></span>
                                   </label>
                                 </div>
@@ -207,7 +214,7 @@ class RightSideNavPage extends React.Component {
                                 <span className="font-weight-600">Show Task statistics</span>
                                 <div className="switch right">
                                   <label>
-                                    <input type="checkbox" />
+                                    <input type="checkbox" onChange={this.handleChange} />
                                     <span className="lever"></span>
                                   </label>
                                 </div>
