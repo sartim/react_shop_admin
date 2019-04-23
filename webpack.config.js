@@ -30,8 +30,7 @@ module.exports = {
         inject: 'body'
     }),
       new CopyWebpackPlugin([
-        { from: 'assets', to: 'assets' },
-        { from: 'bower_components', to: 'bower_components' }
+        { from: 'assets', to: 'assets' }
     ])],
     devServer: {
         historyApiFallback: true
