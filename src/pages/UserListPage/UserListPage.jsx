@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { userActions } from '../../_actions';
-import SideNav from '../SideNavPage/SideNavPage'
+import LeftSideNavPage from '../LeftSideNavPage/LeftSideNavPage'
 import Header from '../HeaderPage/HeaderPage'
 import Script from "../../_helpers/script";
 import { FabPage } from "../FabPage";
@@ -31,7 +31,7 @@ class UserListPage extends React.Component {
             <FabPage />
             <div id="main">
               <div className="wrapper">
-                <SideNav />
+                <LeftSideNavPage />
                   <section id="content">
                     <div className="container">
                       <div className="section">

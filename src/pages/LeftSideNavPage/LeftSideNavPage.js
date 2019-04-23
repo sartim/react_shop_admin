@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import Script from "../../_helpers/script";
 
-class SideNav extends Component {
+class LeftSideNavPage extends Component {
     constructor(props) {
         super(props);
         this.state = {account: ''}
@@ -165,4 +165,4 @@ class SideNav extends Component {
     }
 }
 
-export default SideNav;
+export default LeftSideNavPage;

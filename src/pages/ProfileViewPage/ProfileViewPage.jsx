@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../HeaderPage/HeaderPage";
 import {FabPage} from "../FabPage";
-import SideNav from "../SideNavPage/SideNavPage";
+import SideNav from "../LeftSideNavPage/LeftSideNavPage";
 import Script from "../../_helpers/script";
 
 class ProfileVieWPage extends React.Component {

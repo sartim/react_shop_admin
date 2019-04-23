@@ -4,7 +4,7 @@ import {searchActions} from "../../_actions/search.actions";
 import {getParameterByName} from "../../_helpers/querystring-handler";
 import Link from "react-router-dom/es/Link";
 import Header from "../HeaderPage/HeaderPage";
-import SideNav from "../SideNavPage/SideNavPage";
+import LeftSideNavPage from "../LeftSideNavPage/LeftSideNavPage";
 import Script from "../../_helpers/script";
 import {BreadCrumbPage} from "../BreadCrumbPage";
 import {HorizontalLoader} from "../LoaderPage/HorizontalLoader";
@@ -117,7 +117,7 @@ class SearchResultsPage extends React.Component {
                 <div id="main">
                     <div className="wrapper">
                         <BreadCrumbPage breadcrumbs={breadcrumbs} />
-                        <SideNav />
+                        <LeftSideNavPage />
                         <section id="content">
                             <div className="container">
                                 <div className="section">

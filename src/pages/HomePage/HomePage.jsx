@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import config from 'config';
 import { articleActions } from '../../_actions';
-import SideNav from '../SideNavPage/SideNavPage'
+import LeftSideNavPage from '../LeftSideNavPage/LeftSideNavPage'
 import Header from '../HeaderPage/HeaderPage'
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
@@ -231,7 +231,7 @@ class HomePage extends React.Component {
             <div id="main">
               <div className="wrapper">
                 <BreadCrumbPage />
-                <SideNav />
+                <LeftSideNavPage />
                 <section id="content">
                   <div className="container">
                     <div id="card-stats">

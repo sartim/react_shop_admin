@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import SideNav from '../SideNavPage/SideNavPage'
+import LeftSideNavPage from '../LeftSideNavPage/LeftSideNavPage'
 import Header from '../HeaderPage/HeaderPage'
 import Script from "../../_helpers/script";
 import { FabPage } from "../FabPage";
