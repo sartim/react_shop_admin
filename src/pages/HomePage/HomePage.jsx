@@ -200,7 +200,7 @@ class HomePage extends React.Component {
         chart.exporting.menu.verticalAlign = "top";
 
         chart.events.on("datavalidated", function () {
-            dateAxis.zoom({start:0.79, end:1});
+            dateAxis.zoom({start:0.98, end:1});
         });
 
         return chart;
