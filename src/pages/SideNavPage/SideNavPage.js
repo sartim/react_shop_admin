@@ -29,7 +29,7 @@ class SideNav extends Component {
             <div className="brand-sidebar">
               <h1 className="logo-wrapper">
                 <a href="#" className="brand-logo darken-1">
-                  {/*<img src="#" alt="ADMIN"/>*/}
+                  <img src="/assets/img/shop.png" alt="ADMIN"/>
                   <span className="logo-text hide-on-med-and-down">ADMIN</span>
                 </a>
                 <a href="#" className="navbar-toggler" onClick={Script.minimizeSideNav}>
@@ -40,7 +40,7 @@ class SideNav extends Component {
             <ul id="slide-out" className="side-nav fixed leftside-navigation">
               <li className="side-user-info">
                 <Link to="/profile">
-                  <img src="/assets/img/default_user.png"
+                  <img src="/assets/admin-assets/img/default_user.png"
                        className="side-user-img responsive" />
                   <span className="side-user-name">{user_name}</span>
                 </Link>
