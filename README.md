@@ -21,7 +21,7 @@ React Shop Admin Dashboard. Content management system for managing an online sho
 * List, Add, Update & Delete Product Categories
 * List, Add, Update & Delete Users
 * List, Add, Update & Delete User Roles
-
+* Full text search
 
 **Setup and running project on dev**
 
