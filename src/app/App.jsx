@@ -12,7 +12,7 @@ import {ProfileVieWPage} from "../pages/ProfileViewPage";
 import {SettingsViewPage} from "../pages/SettingsViewPage";
 import {SearchResultsPage} from "../pages/SearchResultsPage";
 import {ProductListPage} from "../pages/ProductListPage";
-import {OrderListPage} from "../pages/OrderListPage/ProductListPage";
+import {OrderListPage} from "../pages/OrderListPage/OrderListPage";
 import {ForgotPasswordPage} from "../pages/ForgotPasswordPage";
 
 class App extends React.Component {
