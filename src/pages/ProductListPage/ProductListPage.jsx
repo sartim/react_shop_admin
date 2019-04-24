@@ -36,12 +36,16 @@ class ProductListPage extends React.Component {
     }
 
     render() {
-        const { } = this.props;
+        const { products } = this.props;
         let element;
         const confirm = <button className="modal-close btn-flat" onClick={() => this.deleteArticle(this.state.id)}>Ok</button>;
         const cancel = <button className="modal-close btn-flat">Cancel</button>;
         const breadcrumbs = <Link to="/product/list" className="breadcrumb">Product List</Link>;
-
+        let all_products;
+        if (products.items) {
+            all_products = products.items.results;
+            console.log(all_products);
+        }
         return (
           <div>
             <Header />
@@ -50,7 +54,7 @@ class ProductListPage extends React.Component {
             <div id="main">
               <div className="wrapper">
                 <BreadCrumbPage breadcrumbs={breadcrumbs} />
-                <SideNav />
+                <LeftSideNavPage />
                   <section id="content">
                     <div className="container">
                       <div className="section">
@@ -66,9 +70,22 @@ class ProductListPage extends React.Component {
                                 <th>ACTION</th>
                               </tr>
                             </thead>
+                            { all_products &&
                             <tbody>
-
+                            { all_products.map((product, index) =>
+                              <tr key={ product.id }>
+                                <td>{ product.id }</td>
+                                <td>{ product.name }</td>
+                                <td>{ product.category }</td>
+                                <td>{ product.items }</td>
+                                <td>{ product.created_date }</td>
+                                <td>
+                                  <button className="btn">Manage</button>
+                                </td>
+                              </tr>
+                            )}
                             </tbody>
+                            }
                           </table>
                         </div>
                       </div>
@@ -82,9 +99,9 @@ class ProductListPage extends React.Component {
 }
 
 function mapStateToProps(state) {
-    const { } = state;
+    const { products } = state;
 
-    return { };
+    return { products };
 }
 
 const connectedProductListPage = connect(mapStateToProps)(ProductListPage);
