@@ -1,5 +1,5 @@
 import {productConstants} from '../_constants';
-import {userService} from '../_services';
+import {productService} from '../_services';
 
 export const productActions = {
     getProducts
@@ -9,7 +9,7 @@ function getProducts() {
     return dispatch => {
         dispatch(request());
 
-        userService.getUsers()
+        productService.getProducts()
             .then(
                 products => dispatch(success(products)),
                 error => dispatch(failure(error.toString()))
