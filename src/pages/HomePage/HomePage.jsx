@@ -93,12 +93,6 @@ class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            orders_today: 0,
-            orders_yesterday: 0,
-            orders_this_month: 0,
-            orders_last_month: 0,
-            orders_this_year: 0,
-            orders_last_year: 0,
             daily_orders: null
         }
     }
@@ -212,7 +206,10 @@ class HomePage extends React.Component {
     }
 
     render() {
-        const {online_users} = this.props;
+        const {
+          orders_today, orders_yesterday, orders_this_month, orders_last_month, orders_this_year, orders_last_year,
+          online_users
+        } = this.props;
 
         const current_user = JSON.parse(localStorage.getItem('user'));
 
@@ -240,7 +237,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Today</p>
-                              <h4 className="card-stats-number"></h4>
+                              <h4 className="card-stats-number">{orders_today}</h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 15%*/}
                                 {/*<span className="cyan text text-lighten-5">from yesterday</span>*/}
@@ -252,7 +249,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue lighten-1 white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Yesterday</p>
-                              <h4 className="card-stats-number"></h4>
+                              <h4 className="card-stats-number">{orders_yesterday}</h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 15%*/}
                                 {/*<span className="cyan text text-lighten-5">from yesterday</span>*/}
@@ -264,7 +261,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders This Month</p>
-                              <h4 className="card-stats-number"></h4>
+                              <h4 className="card-stats-number">{orders_this_month}</h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 70%*/}
                                 {/*<span className="red-text text-lighten-5">last month</span>*/}
@@ -276,7 +273,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Last Month</p>
-                              <h4 className="card-stats-number"></h4>
+                              <h4 className="card-stats-number">{orders_last_month}</h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_up</i> 80%*/}
                                 {/*<span className="teal-text text-lighten-5">from yesterday</span>*/}
@@ -288,7 +285,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders This Year</p>
-                              <h4 className="card-stats-number"></h4>
+                              <h4 className="card-stats-number">{orders_this_year}</h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_down</i> 3%*/}
                                 {/*<span className="deep-orange-text text-lighten-5">from last month</span>*/}
@@ -300,7 +297,7 @@ class HomePage extends React.Component {
                           <div className="card">
                             <div className="card-content light-blue white-text">
                               <p className="card-stats-title" style={{'fontSize': '12px'}}>Orders Last Year</p>
-                              <h4 className="card-stats-number"></h4>
+                              <h4 className="card-stats-number">{orders_last_year}</h4>
                               {/*<p className="card-stats-compare">*/}
                                 {/*<i className="material-icons">keyboard_arrow_down</i> 3%*/}
                                 {/*<span className="deep-orange-text text-lighten-5">from last month</span>*/}
@@ -326,11 +323,13 @@ class HomePage extends React.Component {
 
 function mapStateToProps(state) {
     const {
-        online_users
+      orders_today, orders_yesterday, orders_this_month, orders_last_month, orders_this_year, orders_last_year,
+      online_users
     } = state;
 
     return {
-        online_users
+      orders_today, orders_yesterday, orders_this_month, orders_last_month, orders_this_year, orders_last_year,
+      online_users
     };
 }
 
