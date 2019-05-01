@@ -7,7 +7,7 @@ export const orderActions = {
     delete: _delete
 };
 
-function getOrders() {
+function getAll() {
   return dispatch => {
     dispatch(request());
     orderService.getAll()
