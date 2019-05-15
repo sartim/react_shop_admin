@@ -47,6 +47,7 @@ class SearchResultsPage extends React.Component {
             type = search_results.items.type;
             results = (
                 <div>
+                    <h4 className="header">Results:</h4>
                     {all_results &&
                         <div>
                         {all_results.map((result, index) =>
@@ -123,7 +124,6 @@ class SearchResultsPage extends React.Component {
                                 <div className="section">
                                     <div className="row">
                                         <div className="col s12">
-                                            <h4 className="header">Results:</h4>
                                             {results}
                                         </div>
                                     </div>
