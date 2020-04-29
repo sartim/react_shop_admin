@@ -39,7 +39,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-3": "^6.24.1",
     "copy-webpack-plugin": "^4.6.0",
-    "html-webpack-plugin": "^2.26.0",
+    "html-webpack-plugin": "^4.2.1",
     "jest": "^24.8.0",
     "path": "^0.12.7",
     "react-test-renderer": "^16.8.6",
