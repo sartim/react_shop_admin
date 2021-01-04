@@ -15,7 +15,7 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.0.0-beta.63",
     "@types/core-js": "^2.5.0",
-    "core-js": "^2.5.7",
+    "core-js": "^3.8.2",
     "grapesjs": "^0.14.43",
     "history": "^4.6.3",
     "react": "^16.4.2",
