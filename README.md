@@ -26,13 +26,13 @@ React Shop Admin Dashboard. Content management system for managing an online sho
 **Setup and running project on dev**
 
     $ bower install
-    $ npm install
-    $ npm start
+    $ yarn install
+    $ yarn start
 
 **Build Dev/Prod**
     
-    $ npm run build:dev
-    $ npm run build:prod
+    $ yarn build:dev
+    $ yarn build:prod
 
 
 **Demo URL**
