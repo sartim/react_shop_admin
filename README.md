@@ -25,6 +25,8 @@ React Shop Admin Dashboard. Content management system for managing an online sho
 
 **Setup and running project on dev**
 
+Make sure to create .env file using the .env.example
+
     $ bower install
     $ yarn install
     $ yarn start
