@@ -1,0 +1,42 @@
+name: build
+
+on:
+    push:
+        branches: [ master ]
+
+jobs:
+    build-n-deploy:
+        name: Build and deploy to production
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [16.x]
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Setup CI/CD Server
+              run: |
+                  sudo apt-get update &&
+                  sudo apt-get install -y awscli
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: rm -rf yarn.lock node_modules
+            - run: yarn install
+            - name: Run test
+              run: yarn test --watchAll=false
+              env:
+                  CI: false
+            - name: Run build
+              run: yarn build:prod
+              env:
+                  CI: false
+#            - name: Deploy to Prod S3 Bucket
+#              run: |
+#                  cp .env.production .env
+#                  aws s3 cp ./build ${{ secrets.PROD_S3_URI }} --recursive --acl public-read --region ${{ secrets.AWS_REGION }}
+#              env:
+#                  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#                  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
